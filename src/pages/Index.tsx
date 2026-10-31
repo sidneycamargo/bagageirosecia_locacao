@@ -43,7 +43,7 @@ export default function Index() {
           />
           {/* Subtle gradient focused only on the text area on the left to ensure high readability without darkening the car */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-transparent max-w-3xl" />
-          <div className="absolute inset-0 bg-slate-950/30 sm:hidden" />
+          <div className="absolute inset-0 bg-slate-950/30 sm:hidden opacity-[0]" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28 w-full">
