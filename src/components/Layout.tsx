@@ -53,7 +53,6 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
 
   return (
     <div className="flex flex-col min-h-screen text-slate-800 bg-white font-sans antialiased selection:bg-amber-500 selection:text-white">
-      {/* Top Banner / Info Bar */}
       <div className="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
           <div className="flex items-center gap-4 flex-wrap justify-center">
@@ -78,8 +77,6 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
           </div>
         </div>
       </div>
-
-      {/* Main Header / Navigation */}
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
           {/* Logo */}
@@ -200,11 +197,7 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
           </div>
         )}
       </header>
-
-      {/* Main Page Content */}
       <main className="flex-1">{children || <Outlet />}</main>
-
-      {/* Footer */}
       <footer className="bg-slate-900 text-slate-300 border-t border-slate-800 mt-auto">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -340,8 +333,6 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
           </div>
         </div>
       </footer>
-
-      {/* Floating WhatsApp Button */}
       <aside aria-label="Atendimento pelo WhatsApp">
         <Link
           to={getWhatsAppRoute('Olá, gostaria de saber mais sobre bagageiros', 'botao_flutuante')}
@@ -352,33 +343,6 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
           <span className="font-semibold text-sm hidden sm:inline-block pr-1">WhatsApp</span>
         </Link>
       </aside>
-
-      {/* Cookie / Privacy Banner (Dismissable & stored in localStorage) */}
-      {showCookieBanner && (
-        <div className="fixed bottom-0 inset-x-0 z-50 bg-slate-900/95 backdrop-blur-md text-slate-200 border-t border-slate-700 p-4 shadow-2xl animate-slide-up">
-          <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
-            <p className="leading-relaxed text-slate-300 text-center sm:text-left">
-              Utilizamos seus dados para analisar e personalizar nossos conteúdos e anúncios,
-              fornecer recursos de mídia social e analisar nosso tráfego durante a sua navegação em
-              nossos sites, em serviços de terceiros e parceiros. Ao navegar pelo site, você
-              autoriza a Bagageiros e Cia a coletar tais informações e utilizá-las para estas
-              finalidades. Em caso de dúvidas, acesse nossa{' '}
-              <Link
-                to="/termos"
-                className="underline font-bold text-amber-400 hover:text-amber-300"
-              >
-                Política de Privacidade.
-              </Link>
-            </p>
-            <button
-              onClick={handleDismissCookie}
-              className="shrink-0 px-5 py-2 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-semibold transition shadow"
-            >
-              Fechar
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   )
 }
