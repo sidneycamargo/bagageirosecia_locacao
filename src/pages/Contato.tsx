@@ -100,7 +100,12 @@ export default function Contato() {
                     Horário de Atendimento
                   </span>
                   <span className="text-sm font-semibold">
-                    Segunda a Sábado, mediante agendamento
+                    Segunda Sexta:
+                    <br />
+                    &nbsp; &nbsp; das 8:00 às 11:30 <br />
+                    &nbsp; &nbsp; das 13:30 às 18:00
+                    <br />
+                    Sábado: das 8:00 às 12:00
                   </span>
                 </div>
               </div>
