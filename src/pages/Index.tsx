@@ -52,11 +52,11 @@ export default function Index() {
               <Sparkles className="w-4 h-4 text-amber-400" />
               Londrina e Região • Locação e Venda
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight drop-shadow-md mr-[90px]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight drop-shadow-md mr-[100px]">
               Viaje com Conforto e Segurança
             </h1>
-            <p className="text-lg sm:text-xl text-slate-100 leading-relaxed drop-shadow font-bold">
-              Nada mais agradável que viajar tranquilo,&nbsp;
+            <p className="text-lg sm:text-xl text-slate-100 leading-relaxed drop-shadow font-bold mr-[240px]">
+              Nada mais agradável que viajar tranquilo,&nbsp;&nbsp;
               <span>com conforto e acima de tudo saber que&nbsp;</span>
               <span>tem segurança para você e sua família.</span>
             </p>
