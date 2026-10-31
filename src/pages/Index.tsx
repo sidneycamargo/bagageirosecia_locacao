@@ -57,7 +57,7 @@ export default function Index() {
               Viaje com Conforto e Segurança
             </h1>
 
-            <p className="text-lg sm:text-xl text-slate-100 leading-relaxed font-normal drop-shadow">
+            <p className="text-lg sm:text-xl text-slate-100 leading-relaxed drop-shadow font-bold">
               Nada mais agradável que viajar tranquilo, com conforto e acima de tudo saber que tem
               segurança para você e sua família.
             </p>
