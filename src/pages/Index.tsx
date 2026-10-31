@@ -37,7 +37,7 @@ export default function Index() {
         {/* Background photo overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://bagageirosecia.com.br/wp/wp-content/uploads/elementor/thumbs/car-with-roof-baggage-trunk-parked-side-street-parking-lot-scaled-p51nmp262wtcatpjksz4ikl8lxt08t0s4c17436jv4.jpg"
+            src="https://www.bagageirosecia.com.br/wp/wp-content/uploads/2021/03/car-with-roof-luggage-box-container-travel-road-BIG-1536x1024.jpg"
             alt="Carro com bagageiro de teto"
             className="w-full h-full object-cover object-center opacity-30 brightness-75 scale-105 transform motion-safe:animate-fade-in"
           />
