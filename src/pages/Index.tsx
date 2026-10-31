@@ -33,29 +33,31 @@ export default function Index() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-slate-950 text-white min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
-        {/* Background photo overlay */}
+      <section className="relative bg-slate-900 text-white min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
+        {/* Background photo */}
         <div className="absolute inset-0 z-0">
           <img
             src="https://www.bagageirosecia.com.br/wp/wp-content/uploads/2021/03/car-with-roof-luggage-box-container-travel-road-BIG-1536x1024.jpg"
             alt="Carro com bagageiro de teto"
-            className="w-full h-full object-cover object-center opacity-30 brightness-75 scale-105 transform motion-safe:animate-fade-in"
+            className="w-full h-full object-cover object-right sm:object-center opacity-90 brightness-105 scale-100 transform motion-safe:animate-fade-in"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent opacity-[0.51] text-left opacity-[0.19] opacity-[0] opacity-[0] shadow-[0px_0px_6px_0px_#929292]" />
+          {/* Subtle gradient focused only on the text area on the left to ensure high readability without darkening the car */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-transparent max-w-3xl" />
+          <div className="absolute inset-0 bg-slate-950/30 sm:hidden" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28 w-full opacity-[1]">
-          <div className="max-w-2xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs sm:text-sm font-semibold tracking-wide">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28 w-full">
+          <div className="max-w-2xl space-y-6 drop-shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/80 text-amber-400 border border-amber-500/40 text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-sm">
               <Sparkles className="w-4 h-4 text-amber-400" />
               Londrina e Região • Locação e Venda
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight drop-shadow-md">
               Viaje com Conforto e Segurança
             </h1>
 
-            <p className="text-lg sm:text-xl text-slate-300 leading-relaxed font-light">
+            <p className="text-lg sm:text-xl text-slate-100 leading-relaxed font-normal drop-shadow">
               Nada mais agradável que viajar tranquilo, com conforto e acima de tudo saber que tem
               segurança para você e sua família.
             </p>
@@ -63,7 +65,7 @@ export default function Index() {
             <div className="flex flex-wrap items-center gap-4 pt-4">
               <a
                 href="#bagageiros"
-                className="px-6 py-3.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-bold text-base shadow-lg shadow-amber-500/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2"
+                className="px-6 py-3.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-bold text-base shadow-lg shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2"
               >
                 Saiba mais
               </a>
@@ -72,7 +74,7 @@ export default function Index() {
                   'Olá, gostaria de mais informações para alugar um bagageiro.',
                   'hero_home',
                 )}
-                className="px-6 py-3.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-white border border-slate-700 font-semibold text-base transition-all flex items-center gap-2"
+                className="px-6 py-3.5 rounded-lg bg-slate-900/90 hover:bg-slate-800 text-white border border-slate-600 font-semibold text-base transition-all flex items-center gap-2 shadow-md backdrop-blur-sm"
               >
                 <MessageCircle className="w-5 h-5 text-amber-400" />
                 Falar com Especialista
