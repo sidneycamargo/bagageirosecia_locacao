@@ -33,9 +33,9 @@ export default function Index() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-slate-900 text-white min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
-        {/* Background photo */}
-        <div className="absolute inset-0 z-0">
+      <section className="relative bg-slate-900 text-white flex flex-col md:block md:min-h-[580px] lg:min-h-[640px] md:flex-none overflow-hidden">
+        {/* Background photo - Desktop (absolute background) */}
+        <div className="hidden md:block absolute inset-0 z-0 pointer-events-none">
           <img
             src="https://www.bagageirosecia.com.br/wp/wp-content/uploads/2021/03/car-with-roof-luggage-box-container-travel-road-BIG-1536x1024.jpg"
             alt="Carro com bagageiro de teto"
@@ -43,10 +43,10 @@ export default function Index() {
           />
           {/* Subtle gradient focused only on the text area on the left to ensure high readability without darkening the car */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-transparent max-w-3xl" />
-          <div className="absolute inset-0 bg-slate-950/30 sm:hidden opacity-[0]" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28 w-full">
+        {/* Content Area */}
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-12 pb-6 md:py-20 lg:py-28 w-full">
           <div className="max-w-2xl space-y-6 drop-shadow-sm">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/80 text-amber-400 border border-amber-500/40 text-xs sm:text-sm font-semibold tracking-wide backdrop-blur-sm">
               <Sparkles className="w-4 h-4 text-amber-400" />
@@ -82,6 +82,17 @@ export default function Index() {
                 Falar com Especialista
               </Link>
             </div>
+          </div>
+        </div>
+
+        {/* Dedicated Mobile Photo Container - Exibe a foto inteira sem cortes */}
+        <div className="md:hidden relative w-full px-4 pb-8 pt-2">
+          <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-950">
+            <img
+              src="https://www.bagageirosecia.com.br/wp/wp-content/uploads/2021/03/car-with-roof-luggage-box-container-travel-road-BIG-1536x1024.jpg"
+              alt="Carro com bagageiro de teto"
+              className="w-full h-auto object-contain opacity-95 brightness-105 transform motion-safe:animate-fade-in block"
+            />
           </div>
         </div>
       </section>
