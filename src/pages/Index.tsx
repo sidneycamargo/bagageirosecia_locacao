@@ -41,7 +41,7 @@ export default function Index() {
             alt="Carro com bagageiro de teto"
             className="w-full h-full object-cover object-center opacity-30 brightness-75 scale-105 transform motion-safe:animate-fade-in"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent opacity-[0.51] text-left opacity-[0.19]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent opacity-[0.51] text-left opacity-[0.19] opacity-[0]" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28 w-full">
