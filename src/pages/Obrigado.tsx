@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { CheckCircle2, MessageCircle, ArrowLeft, Home } from 'lucide-react'
+import { getWhatsAppRoute } from '@/lib/whatsapp'
 
 export default function Obrigado() {
   const location = useLocation()
@@ -34,15 +35,16 @@ export default function Obrigado() {
           <p className="text-xs text-slate-500 font-medium">
             Precisa de resposta imediata? Chame-nos diretamente pelo WhatsApp:
           </p>
-          <a
-            href="https://wa.me/554399957139/?text=Ol%C3%A1,%20acabei%20de%20enviar%20uma%20mensagem%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento."
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to={getWhatsAppRoute(
+              'Olá, acabei de enviar uma mensagem pelo site e gostaria de um orçamento.',
+              'pagina_obrigado',
+            )}
             className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm shadow transition"
           >
             <MessageCircle className="w-4 h-4 fill-current" />
             Conversar Agora no WhatsApp
-          </a>
+          </Link>
 
           <Link
             to="/"

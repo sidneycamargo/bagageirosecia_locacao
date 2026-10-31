@@ -10,6 +10,7 @@ import {
   Send,
   HelpCircle,
 } from 'lucide-react'
+import { getWhatsAppRoute } from '@/lib/whatsapp'
 import { BLOG_POSTS, COMMON_FAQ } from '@/data/blogData'
 
 export default function Index() {
@@ -66,15 +67,16 @@ export default function Index() {
               >
                 Saiba mais
               </a>
-              <a
-                href="https://api.whatsapp.com/send?phone=5543999957139&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20para%20alugar%20um%20bagageiro."
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={getWhatsAppRoute(
+                  'Olá, gostaria de mais informações para alugar um bagageiro.',
+                  'hero_home',
+                )}
                 className="px-6 py-3.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-white border border-slate-700 font-semibold text-base transition-all flex items-center gap-2"
               >
                 <MessageCircle className="w-5 h-5 text-amber-400" />
                 Falar com Especialista
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -202,14 +204,15 @@ export default function Index() {
                 Suportes de bicicleta seguros para teto ou engate. Práticos e perfeitos para viagens
                 de aventura e lazer.
               </p>
-              <a
-                href="https://api.whatsapp.com/send?phone=5543999957139&text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20Transbike."
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={getWhatsAppRoute(
+                  'Olá, gostaria de informações sobre Transbike.',
+                  'card_transbike',
+                )}
                 className="text-xs font-bold text-amber-600 hover:text-amber-700 flex items-center gap-1"
               >
                 Consultar via WhatsApp &rarr;
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -228,15 +231,16 @@ export default function Index() {
               </h2>
             </div>
             <div className="flex flex-wrap gap-3">
-              <a
-                href="https://api.whatsapp.com/send?phone=5543999957139&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20para%20alugar%20um%20bagageiro."
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={getWhatsAppRoute(
+                  'Olá, gostaria de mais informações para alugar um bagageiro.',
+                  'secao_comprar_alugar',
+                )}
                 className="px-5 py-3 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shadow transition flex items-center gap-2"
               >
                 <MessageCircle className="w-4 h-4" />
                 Quero Comprar ou Alugar Agora
-              </a>
+              </Link>
               <a
                 href="#home-contact"
                 className="px-5 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition"
@@ -550,15 +554,16 @@ export default function Index() {
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                 Resposta rápida no mesmo dia
               </span>
-              <a
-                href="https://wa.me/554399957139/?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20bagageiros"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={getWhatsAppRoute(
+                  'Olá, gostaria de saber mais sobre bagageiros',
+                  'formulario_home',
+                )}
                 className="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1"
               >
                 <MessageCircle className="w-3.5 h-3.5" />
                 Prefere chamar no WhatsApp?
-              </a>
+              </Link>
             </div>
           </div>
         </div>

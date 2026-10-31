@@ -13,6 +13,7 @@ import {
   Wrench,
   Sparkles,
 } from 'lucide-react'
+import { getWhatsAppRoute } from '@/lib/whatsapp'
 import { BLOG_POSTS, COMMON_FAQ, TECH_SPECS } from '@/data/blogData'
 
 export default function BlogPostPage() {
@@ -187,17 +188,16 @@ export default function BlogPostPage() {
                   inclusa.
                 </p>
               </div>
-              <a
-                href={`https://wa.me/554399957139/?text=Ol%C3%A1,%20gostaria%20de%20um%20or%C3%A7amento%20para%20o%20${encodeURIComponent(
-                  post.title,
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={getWhatsAppRoute(
+                  `Olá, gostaria de um orçamento para o ${post.title}`,
+                  `pagina_veiculo_${post.slug}`,
+                )}
                 className="mt-4 w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm shadow transition"
               >
                 <MessageCircle className="w-4 h-4 fill-current" />
                 Orçamento no WhatsApp
-              </a>
+              </Link>
             </div>
           </div>
 

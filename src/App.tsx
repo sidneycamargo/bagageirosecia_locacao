@@ -14,6 +14,7 @@ import Contato from './pages/Contato'
 import Termos from './pages/Termos'
 import Obrigado from './pages/Obrigado'
 import BlogPostPage from './pages/BlogPostPage'
+import WhatsAppRedirect from './pages/WhatsAppRedirect'
 import NotFound from './pages/NotFound'
 
 const App = () => (
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/termos" element={<Termos />} />
           <Route path="/obrigado" element={<Obrigado />} />
           <Route path="/contato/confirma" element={<Obrigado />} />
+          <Route path="/whatsapp" element={<WhatsAppRedirect />} />
 
           {/* Individual Blog / Vehicle posts */}
           <Route path="/cherry-tiggo-8-com-bagageiros" element={<BlogPostPage />} />

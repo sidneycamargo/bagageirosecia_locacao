@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { MessageCircle, Mail, MapPin, Send, PhoneCall } from 'lucide-react'
+import { getWhatsAppRoute } from '@/lib/whatsapp'
 
 export default function Contato() {
   const navigate = useNavigate()
@@ -36,15 +37,16 @@ export default function Contato() {
             Entre em contato conosco para tirar as suas dúvidas.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
-            <a
-              href="https://wa.me/554399957139/?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20bagageiros"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to={getWhatsAppRoute(
+                'Olá, gostaria de saber mais sobre bagageiros',
+                'pagina_contato_topo',
+              )}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm shadow-md transition transform hover:-translate-y-0.5"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
               Chame pelo Whatsapp
-            </a>
+            </Link>
             <a
               href="#outrosmeios"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 font-semibold text-sm shadow-sm transition"
@@ -64,10 +66,8 @@ export default function Contato() {
             </p>
 
             <div className="space-y-4 pt-2">
-              <a
-                href="https://wa.me/554399957139/?text=Ol%C3%A1,%20Pode%20me%20ajudar?"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={getWhatsAppRoute('Olá, Pode me ajudar?', 'pagina_contato_card')}
                 className="flex items-center gap-3 p-3.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition group"
               >
                 <div className="w-10 h-10 rounded-lg bg-[#25D366] text-white flex items-center justify-center shrink-0">
@@ -79,7 +79,7 @@ export default function Contato() {
                     (43) 99995-7139
                   </span>
                 </div>
-              </a>
+              </Link>
 
               <div className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 text-slate-800 border border-slate-200">
                 <div className="w-10 h-10 rounded-lg bg-slate-800 text-white flex items-center justify-center shrink-0">

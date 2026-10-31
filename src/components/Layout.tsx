@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate, Outlet } from 'react-router-dom'
 import { Menu, X, MessageCircle, Phone, MapPin, ChevronRight } from 'lucide-react'
+import { getWhatsAppRoute } from '@/lib/whatsapp'
 
 export default function Layout({ children }: { children?: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -67,15 +68,13 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
             </span>
           </div>
           <div className="flex items-center gap-3">
-            <a
-              href="https://wa.me/554399957139/?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20bagageiros"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to={getWhatsAppRoute('Olá, gostaria de saber mais sobre bagageiros', 'topo_faixa')}
               className="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1 transition-colors"
             >
               <MessageCircle className="w-3.5 h-3.5" />
               Chame no WhatsApp
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -130,15 +129,16 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
               )
             })}
 
-            <a
-              href="https://api.whatsapp.com/send?phone=5543999957139&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20para%20alugar%20um%20bagageiro."
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to={getWhatsAppRoute(
+                'Olá, gostaria de mais informações para alugar um bagageiro.',
+                'header_nav',
+              )}
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
               Solicitar Orçamento
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile menu trigger */}
@@ -185,16 +185,17 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
               )
             })}
             <div className="pt-2">
-              <a
-                href="https://api.whatsapp.com/send?phone=5543999957139&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20para%20alugar%20um%20bagageiro."
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={getWhatsAppRoute(
+                  'Olá, gostaria de mais informações para alugar um bagageiro.',
+                  'menu_mobile',
+                )}
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-semibold text-base shadow"
               >
                 <MessageCircle className="w-5 h-5 fill-current" />
                 Quero Comprar ou Alugar Agora
-              </a>
+              </Link>
             </div>
           </div>
         )}
@@ -222,15 +223,16 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
                 e Região. Viaje com conforto, espaço e segurança total para sua família.
               </p>
               <div className="pt-2">
-                <a
-                  href="https://api.whatsapp.com/send?phone=5543999957139&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20para%20alugar%20um%20bagageiro."
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to={getWhatsAppRoute(
+                    'Olá, gostaria de mais informações para alugar um bagageiro.',
+                    'rodape',
+                  )}
                   className="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded bg-slate-800 text-amber-400 border border-slate-700 hover:bg-slate-700 transition"
                 >
                   <MessageCircle className="w-3.5 h-3.5" />
                   WhatsApp: (43) 99995-7139
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -341,16 +343,14 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
 
       {/* Floating WhatsApp Button */}
       <aside aria-label="Atendimento pelo WhatsApp">
-        <a
-          href="https://wa.me/554399957139/?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20bagageiros"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to={getWhatsAppRoute('Olá, gostaria de saber mais sobre bagageiros', 'botao_flutuante')}
           aria-label="Fale conosco no WhatsApp"
           className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white px-4 py-3 rounded-full shadow-2xl transition-all transform hover:scale-105 active:scale-95 group"
         >
           <MessageCircle className="w-6 h-6 fill-current animate-pulse" />
           <span className="font-semibold text-sm hidden sm:inline-block pr-1">WhatsApp</span>
-        </a>
+        </Link>
       </aside>
 
       {/* Cookie / Privacy Banner (Dismissable & stored in localStorage) */}
