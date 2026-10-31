@@ -41,10 +41,10 @@ export default function Index() {
             alt="Carro com bagageiro de teto"
             className="w-full h-full object-cover object-center opacity-30 brightness-75 scale-105 transform motion-safe:animate-fade-in"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent opacity-[0.51] text-left opacity-[0.19] opacity-[0]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent opacity-[0.51] text-left opacity-[0.19] opacity-[0] opacity-[0] shadow-[0px_0px_6px_0px_#929292]" />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28 w-full">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-28 w-full opacity-[1]">
           <div className="max-w-2xl space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs sm:text-sm font-semibold tracking-wide">
               <Sparkles className="w-4 h-4 text-amber-400" />
